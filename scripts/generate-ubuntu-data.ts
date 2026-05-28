@@ -34,10 +34,14 @@ const SVG_OUT = join(OUT_DIR, "svg-alphabet.generated.ts")
 const ADVANCE_OUT = join(OUT_DIR, "glyph-advance-ratio.generated.ts")
 const METRICS_OUT = join(OUT_DIR, "metrics.generated.ts")
 
-/** Characters we want to ship. Matches root index.ts svgAlphabet keys. */
+/** Characters we want to ship. Latin (matches root index.ts svgAlphabet
+ *  keys) + Ukrainian Cyrillic subset (А-Я а-я + ґҐ єЄ іІ їЇ). */
 const CHARSET =
   "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" +
-  "!\"#$'()*+,-./<=>[\\]^_"
+  "!\"#$'()*+,-./<=>[\\]^_" +
+  "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ" +
+  "абвгдежзийклмнопрстуфхцчшщъыьэюя" +
+  "ҐґЄєІіЇї"
 
 /** Bezier flatness threshold in unit-square space. 0.004 gives ~250
  *  subdivisions of a unit-wide curve — sub-pixel at silkscreen scale
