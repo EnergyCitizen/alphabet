@@ -58,7 +58,12 @@ const designCapWidth = capH.x2 - capH.x1
 /** Normalize Ubuntu coords (font units, Y up, baseline at 0) to
  *  unit-square (X in [0..glyphWidth], Y in [0..1] with 0 at top). */
 const normalizeX = (x: number) => x / designHeight
-const normalizeY = (y: number) => (yMax - y) / designHeight
+/** opentype.js getPath() returns SVG-DOWN Y coords (ascender = negative,
+ *  baseline = 0, descender = positive). Convert to unit-square Y-DOWN
+ *  by adding to yMax (which is the font's max ascender, positive in
+ *  font Y-up) so that glyph top maps to small normalized values and
+ *  glyph bottom maps to large ones. */
+const normalizeY = (y: number) => (yMax + y) / designHeight
 
 type Point = { x: number; y: number }
 
