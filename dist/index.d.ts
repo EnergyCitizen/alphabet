@@ -2,10 +2,10 @@ declare const svgAlphabet$1: Record<string, string>;
 
 declare const glyphAdvanceRatio$1: Record<string, number>;
 
-declare const strokeWidthRatio$1 = 0.08;
-declare const glyphWidthRatio$1 = 0.5508791086074476;
-declare const spaceWidthRatio$1 = 0.23789907312049433;
-declare const lineHeightRatio$1 = 1.212152420185376;
+declare const strokeWidthRatio$1 = 0.05;
+declare const glyphWidthRatio$1 = 0.5196470097191582;
+declare const spaceWidthRatio$1 = 0.21072088724584104;
+declare const lineHeightRatio$1 = 1.087800369685767;
 declare const letterSpacingRatio$1 = 0;
 
 /**
